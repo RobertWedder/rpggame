@@ -1,0 +1,82 @@
+@font-face {
+   font-family: main_font;
+   src: url("./data/fonts/Dalelands_Uncial.otf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: main_font;
+}
+
+.container {
+    height: 100vh;
+    background: url("C:/Users/Krystian Sadowski/Desktop/DND/DnD Game/DND test game/src/data/imgs/start-background.jpg") no-repeat 0 0/cover;
+    background-position: center;
+}
+.main_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: relative;
+}
+
+.menu {
+  min-width: 450px;
+  min-height: 450px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px 5px black;
+  background: url("https://res.cloudinary.com/tomy04/image/upload/v1516495005/Forgotten/main-parchment.png") no-repeat 0 0/cover;
+  background-position: center;
+}
+.menu_list {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.menu_list_item {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 40px;
+  .list_item_content {
+    z-index: 10;
+    height: 100%;
+    position: relative;
+    line-height: 35px;
+    text-decoration: none;
+    color: black;
+  }
+  .list_item_background {
+    background: url("https://res.cloudinary.com/tomy04/image/upload/v1516495000/Forgotten/darker-parchment-fadet.png") no-repeat center;
+    background-size: 80% 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity .8s ease-in-out, background-size .8s ease-in-out;
+  }
+  &:hover{
+    .list_item_background {
+      opacity: 1;
+      background-size: 90% 100%;
+    }
+  }
+}
+.menu_list_spacer {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}

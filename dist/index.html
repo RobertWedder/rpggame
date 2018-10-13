@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Forgotten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Gaming Panel">
+    <meta name="author" content="Tomasz Głodkowski glodkowskit@gmail.com">
+    <meta name="keywords" content="Forgotten Realms, Dungeons&Dragons, RPG, Gaming">
+  <link href="main.css" rel="stylesheet"></head>
+
+  <body>
+      <div id="root" class="root"></div>
+      <button id="bstop">Stop</button>
+    <button id="bplay">Play</button>
+    <script>
+        var snd = new Audio("http://rpgdlakoneserow.ma7.eu/abc.mp3");
+        snd.loop = true;
+        snd.autoplay = true;
+
+        document.getElementById("bstop").onclick = function () { snd.pause(); };
+
+        document.getElementById("bplay").onclick = function () { snd.play(); };
+    </script>
+  <script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="app.js"></script></body>
+</html>

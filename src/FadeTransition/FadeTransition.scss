@@ -1,0 +1,15 @@
+.fadeTransition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: black;
+  z-index: 15;
+  transition: opacity 4s ease-in;
+  pointer-events: none;
+}
+.fadeTransition.active {
+  opacity: 1;
+}
