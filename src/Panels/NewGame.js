@@ -13,7 +13,7 @@ const NewGame = () =>
             <div className="list_item_background" />
             <Link className="list_item_content" to="/JoinToCampaingn">dolacz do kampanii</Link>
           </li>
-		  <img className="menu_list_spacer" src={spacer} alt="spacer" />
+          <img className="menu_list_spacer" src={spacer} alt="spacer" />
           <li className="menu_list_item">
             <div className="list_item_background" />
             <Link className="list_item_content" to="/StartGame">nowa gra</Link>
@@ -24,7 +24,7 @@ const NewGame = () =>
             <Link className="list_item_content" to="/dist">powrót</Link>
           </li>
           <img className="menu_list_spacer" src={spacer} alt="spacer" />
-		</ul>
+        </ul>
       </div>
     </div>
   );

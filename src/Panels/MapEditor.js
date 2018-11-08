@@ -13,7 +13,7 @@ const MapEditor = () =>
             <div className="list_item_background" />
             <Link className="list_item_content" to="/dist">nowa mapa</Link>
           </li>
-		  <img className="menu_list_spacer" src={spacer} alt="spacer" />
+          <img className="menu_list_spacer" src={spacer} alt="spacer" />
           <li className="menu_list_item">
             <div className="list_item_background" />
             <Link className="list_item_content" to="/dist">nowe lokacje</Link>
@@ -28,7 +28,7 @@ const MapEditor = () =>
             <div className="list_item_background" />
             <Link className="list_item_content" to="/dist">elementy mapy</Link>
           </li>
-		  <img className="menu_list_spacer" src={spacer} alt="spacer" />
+          <img className="menu_list_spacer" src={spacer} alt="spacer" />
           <li className="menu_list_item">
             <div className="list_item_background" />
             <Link className="list_item_content" to="/dist">generator mapy</Link>
@@ -38,7 +38,7 @@ const MapEditor = () =>
             <div className="list_item_background" />
             <Link className="list_item_content" to="/dist">powrót</Link>
           </li>
-		</ul>
+        </ul>
       </div>
     </div>
   );

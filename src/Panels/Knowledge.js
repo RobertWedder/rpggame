@@ -14,7 +14,7 @@ const Knowledge = () =>
             <Link className="list_item_content" to="/dist">encyklopiedia d&d 3,5</Link>
           </li>
           <img className="menu_list_spacer" src={spacer} alt="spacer" />
-		  <li className="menu_list_item">
+          <li className="menu_list_item">
             <div className="list_item_background" />
             <Link className="list_item_content" to="/dist">powrót</Link>
           </li>

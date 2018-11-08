@@ -1,19 +1,16 @@
-//site import list
+// site import list
 
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MainPanel from './Panels/MainPanel';
 import NewGame from './Panels/NewGame';
-  import JoinToCampaingn from './Panels/NewGame/JoinToCampaingn';
-  import StartGame from './Panels/NewGame/StartGame';
+import JoinToCampaingn from './Panels/NewGame/JoinToCampaingn';
+import StartGame from './Panels/NewGame/StartGame';
 import Campaigns from './Panels/Campaigns';
 import Heroes from './Panels/Heroes';
 import Knowledge from './Panels/Knowledge';
 import MapEditor from './Panels/MapEditor';
-import Sample from './Panels/sample';
-
-
-
+import Sample from './Panels/Sample';
 import './App.scss';
 
 class App extends React.Component {
@@ -32,9 +29,9 @@ class App extends React.Component {
             <Route path="/knowledge" component={Knowledge} />
             <Route path="/map" component={MapEditor} />
             <Route path="/sample" component={Sample} />
-			<Route path="/JoinToCampaingn" component={JoinToCampaingn} />
-			<Route path="/StartGame" component={StartGame} />
-		  </div>
+            <Route path="/JoinToCampaingn" component={JoinToCampaingn} />
+            <Route path="/StartGame" component={StartGame} />
+          </div>
         </Router>
       </div>
     );
