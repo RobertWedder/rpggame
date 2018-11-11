@@ -3,15 +3,17 @@ module.exports = {
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "no-return-assign": 0,
-        // "jsx-a11y/click-events-have-key-events": false,
+        "jsx-a11y/click-events-have-key-events": false,
         // 'jsx-a11y/interactive-supports-focus': false,
         'react/forbid-prop-types': 0,
         // "react/jsx-no-bind": ['error', {"allowBind": true, "allowArrowFunctions": true}],
         // "jsx-a11y/anchor-is-valid": ['error', {"components": true }],
-        // 'jsx-a11y/no-noninteractive-element-interactions': false,
+        'jsx-a11y/no-noninteractive-element-interactions': false,
         "jsx-a11y/anchor-is-valid": 0,
+        "react/require-default-props": 0,
     },
     "env": {
         "browser": true,
+        "es6": true,
     }
 };
