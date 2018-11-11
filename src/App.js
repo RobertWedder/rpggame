@@ -5,7 +5,7 @@ import { faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import sound from '../abc.mp3';
 import UniversalMenu from './Components/UniversalMenu';
-import StatesTable from './Components/StatesTable';
+import ConditionsTable from './Components/ConditionsTable';
 import './App.scss';
 
 library.add(faVolumeMute, faVolumeUp);
@@ -26,7 +26,7 @@ const heroesLinks = [
   { label: 'create a hero', link: 'createHero' }, { label: 'back' },
 ];
 const knowledgeLinks = [
-  { label: 'glossary' }, { label: 'states' }, { label: 'back' },
+  { label: 'glossary' }, { label: 'conditions' }, { label: 'back' },
 ];
 const mapLinks = [
   { label: 'new map', link: 'newMap' }, { label: 'new items', link: 'newItems' }, { label: 'back' },
@@ -66,7 +66,7 @@ class App extends React.Component {
             <Route exact path="/dist/heroes" render={props => <UniversalMenu {...props} links={heroesLinks} />} />
             <Route exact path="/dist/knowledge" render={props => <UniversalMenu {...props} links={knowledgeLinks} />} />
             <Route exact path="/dist/map" render={props => <UniversalMenu {...props} links={mapLinks} />} />
-            <Route exact path="/dist/knowledge/states" render={props => <StatesTable {...props} />} />
+            <Route exact path="/dist/knowledge/conditions" render={props => <ConditionsTable {...props} />} />
           </div>
         </Router>
       </div>

@@ -1,14 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Input } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import data from '../data/DB/conditions.json';
 
-const data = [
-  { name: 'stunned', description: 'you are tunned', translation: 'oszołomiony' },
-  { name: 'dead', description: 'you are dead', translation: 'martwy' },
-  { name: 'flatfooted', description: 'you are flatfooted', translation: 'nieprzygotowany' },
-  { name: 'stable', description: 'you are stable', translation: 'stabilny' },
-];
-
-class StatesTable extends React.Component {
+class ConditionsTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = { charStates: data, selectedRow: null, showedContent: null };
@@ -18,18 +14,28 @@ class StatesTable extends React.Component {
 
   handleChange(e) {
     const filteredStates = data.filter(charState =>
-      charState.name.includes(e.target.value) || charState.translation.includes(e.target.value));
+      charState.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+      charState.translation.toLowerCase().includes(e.target.value.toLowerCase()));
     this.setState({ charStates: filteredStates });
   }
 
   selectRow(e) {
     const { charStates } = this.state;
     const content = charStates.find(charState => charState.name === e.target.textContent);
-    this.setState({ selectedRow: e.target.textContent, showedContent: content.description });
+    this.setState({ selectedRow: e.target.textContent, showedContent: content });
   }
 
   render() {
     const { charStates, selectedRow, showedContent } = this.state;
+    const { location, history } = this.props;
+    const content = showedContent &&
+      (
+        <div>
+          <h2>{showedContent.name}</h2>
+          <h3>{`(${showedContent.translation})`}</h3>
+          <p>{showedContent.description}</p>
+        </div>
+      );
     return (
       <div className="menu states">
         <div className="searchlist-container">
@@ -42,15 +48,22 @@ class StatesTable extends React.Component {
             ))}
           </ul>
         </div>
-        <div className="searchlist-content">{showedContent || 'Select state...'}</div>
+        <div className="searchlist-content">{(showedContent && content) || 'Select condition...'}</div>
+        <Link
+          className="back-button"
+          to={location.pathname}
+          onClick={() => history.goBack()}
+        >
+          back
+        </Link>
       </div>
     );
   }
 }
 
-// StatesTable.propTypes = {
-//   links: PropTypes.array.isRequired,
-//   location: PropTypes.object.isRequired,
-// };
+ConditionsTable.propTypes = {
+  location: PropTypes.object,
+  history: PropTypes.object,
+};
 
-export default StatesTable;
+export default ConditionsTable;
